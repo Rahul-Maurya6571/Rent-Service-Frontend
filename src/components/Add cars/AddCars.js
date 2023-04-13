@@ -64,7 +64,7 @@ function AddCar() {
           }
         }).catch(err => console.log(err))
     }
-  }, [url])
+  })
 
 
   /* if we have agencyEmail */
