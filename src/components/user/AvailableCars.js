@@ -13,7 +13,7 @@ function AvailableCars() {
         const user = JSON.parse(localStorage.getItem("user"))
         SetUserEmail(user.email)
 
-        fetch("https://rent-service-frontend.onrender.com/allcars", {
+        fetch("https://rent-service-backend.onrender.com/allcars", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ function AvailableCars() {
         console.log(id,carModel)
         console.log(selectedOptionValue)
         if(userEmail){
-            fetch("https://rent-service-frontend.onrender.com/rentcar", {
+            fetch("https://rent-service-backend.onrender.com/rentcar", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),

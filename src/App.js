@@ -20,7 +20,7 @@ const Routing = () =>{
     if(!agencyToken && !usertoken){
       return navigate("/register")
     }
-  },[])
+  })
 
   return<>
     <Header/>

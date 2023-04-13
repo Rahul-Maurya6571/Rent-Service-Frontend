@@ -10,7 +10,7 @@ function ViewRentedCars() {
         console.log(userEmail)
 
 
-        fetch("https://rent-service-frontend.onrender.com/cartitems", {
+        fetch("https://rent-service-backend.onrender.com/cartitems", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),

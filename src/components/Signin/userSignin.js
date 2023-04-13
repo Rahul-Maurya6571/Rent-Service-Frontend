@@ -22,7 +22,7 @@ const UserSignin = () => {
         event.preventDefault();
         // console.log("Logging in with data:", formData);
 
-        fetch("https://rent-service-frontend.onrender.com/usersignin",{
+        fetch("https://rent-service-backend.onrender.com/usersignin",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

@@ -25,7 +25,7 @@ function AddCar() {
     if (url) {
       shouldShowRegisterPage(false)
 
-      fetch("https://rent-service-frontend.onrender.com/addcar", {
+      fetch("https://rent-service-backend.onrender.com/addcar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,12 +64,12 @@ function AddCar() {
           }
         }).catch(err => console.log(err))
     }
-  })
+  }, [url])
 
 
   /* if we have agencyEmail */
   const getAddedCars = (id) => {
-    fetch("https://rent-service-frontend.onrender.com/addedcar", {
+    fetch("https://rent-service-backend.onrender.com/addedcar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

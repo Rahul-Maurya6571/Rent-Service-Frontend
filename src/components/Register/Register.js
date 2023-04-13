@@ -22,7 +22,7 @@ const Register = () => {
         // console.log(data)
         // console.log(type)
         if(type ==="user"){
-            fetch("https://rent-service-frontend.onrender.com/registeruser",{
+            fetch("https://rent-service-backend.onrender.com/registeruser",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -50,7 +50,7 @@ const Register = () => {
             })
         }
         if(type ==="agency"){
-            fetch("https://rent-service-frontend.onrender.com/registeragency",{
+            fetch("https://rent-service-backend.onrender.com/registeragency",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
