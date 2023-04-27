@@ -5,11 +5,13 @@ import UserSignin from './components/Signin/userSignin';
 import {ToastContainer} from "react-toastify";
 import AgencySignin from './components/Signin/AgencySignin';
 import Header from './components/Header/Header';
-import AddCar from './components/Add cars/AddCars';
 import { useEffect } from 'react';
 import AvailableCars from './components/user/AvailableCars';
 import ViewRentedCars from './components/user/ViewRentedCars';
 import BookedCars from './components/Add cars/BookedCars';
+import ViewPostedCars from './components/Add cars/ViewPostedCars';
+import AddMoreCars from './components/Add cars/AddMoreCar';
+import LandingPage from './components/LandingPage/LandingPage';
 
 
 const Routing = () =>{
@@ -18,20 +20,23 @@ const Routing = () =>{
     const agencyToken = localStorage.getItem("agencytoken")
     const usertoken = localStorage.getItem("usertoken")
     if(!agencyToken && !usertoken){
-      return navigate("/register")
+      return navigate("/")
     }
   },[])
 
   return<>
     <Header/>
     <Routes>
+      <Route path='/' element={<LandingPage/>}/>
       <Route path='/register' element={<Register/>} />
       <Route path='/usersignin' element={<UserSignin/>} />
       <Route path='/agencysignin' element={<AgencySignin/>} />
-      <Route path='/addcar' element={<AddCar/>} />
+      <Route path='/viewpostedcars' element={<ViewPostedCars/>}/>
+      <Route path='/addmorecars' element={<AddMoreCars/>} />
       <Route path='/viewcar' element={<AvailableCars/>} />
       <Route path='/viewrentedcars' element={<ViewRentedCars/>} />
       <Route path='/bookedcars' element={<BookedCars/>} />
+      
     </Routes>
   </>
 }
