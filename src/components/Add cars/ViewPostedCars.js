@@ -9,7 +9,7 @@ function ViewPostedCars() {
 
     useEffect(() => {
        
-        fetch("https://car-rental-backend-fpn8.onrender.com/viewpostedcars", {
+        fetch("https://rent-service-backend.onrender.com/viewpostedcars", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("agencytoken"),
@@ -34,7 +34,7 @@ function ViewPostedCars() {
     }, [])
 
     const deleteItem = (id,car)=>{
-        fetch("https://car-rental-backend-fpn8.onrender.com/deleteagencycar",{
+        fetch("https://rent-service-backend.onrender.com/deleteagencycar",{
             method:"DELETE",
             headers:{
                 "Authorization": "Bearer " + localStorage.getItem("agencytoken"),

@@ -12,7 +12,7 @@ function ViewRentedCars() {
         // console.log(userEmail)
 
 
-        fetch("https://car-rental-backend-fpn8.onrender.com/cartitems", {
+        fetch("https://rent-service-backend.onrender.com/cartitems", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),
                 "Content-Type": "application/json"
@@ -32,7 +32,7 @@ function ViewRentedCars() {
     }, [])
 
     const deleteItem = (id) => {
-        fetch("https://car-rental-backend-fpn8.onrender.com/deletecar", {
+        fetch("https://rent-service-backend.onrender.com/deletecar", {
             method: "DELETE",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),

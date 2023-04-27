@@ -23,7 +23,7 @@ function AddMoreCars() {
         if (url) {
             // shouldShowRegisterPage(false)
 
-            fetch("https://car-rental-backend-fpn8.onrender.com/addcar", {
+            fetch("https://rent-service-backend.onrender.com/addcar", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

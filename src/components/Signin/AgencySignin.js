@@ -23,7 +23,7 @@ const AgencySignin = () => {
         event.preventDefault();
         // console.log("Logging in with data:", formData);
 
-        fetch("https://car-rental-backend-fpn8.onrender.com/agencysignin",{
+        fetch("https://rent-service-backend.onrender.com/agencysignin",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

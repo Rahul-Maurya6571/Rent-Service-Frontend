@@ -5,7 +5,7 @@ function BookedCars(){
 const [bookedCars,setBookedCars] = useState([])
 
     useEffect(()=>{
-        fetch("https://car-rental-backend-fpn8.onrender.com/bookedcars",{
+        fetch("https://rent-service-backend.onrender.com/bookedcars",{
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("agencytoken"),
                 "Content-Type": "application/json"

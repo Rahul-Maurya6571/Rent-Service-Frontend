@@ -13,7 +13,7 @@ function AvailableCars() {
         // const user = JSON.parse(localStorage.getItem("user"))
         // SetUserEmail(user.email)
 
-        fetch("https://car-rental-backend-fpn8.onrender.com/allcars", {
+        fetch("https://rent-service-backend.onrender.com/allcars", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),
                 "Content-Type": "application/json"
@@ -33,7 +33,7 @@ function AvailableCars() {
                 }
             })
 
-        fetch("https://car-rental-backend-fpn8.onrender.com/totalrenteditem",{
+        fetch("https://rent-service-backend.onrender.com/totalrenteditem",{
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),
                 "Content-Type": "application/json"
@@ -50,7 +50,7 @@ function AvailableCars() {
         console.log(carModel)
         console.log(selectedOptionValue)
 
-        fetch("https://car-rental-backend-fpn8.onrender.com/rentcar", {
+        fetch("https://rent-service-backend.onrender.com/rentcar", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("usertoken"),
